@@ -1,5 +1,6 @@
 ﻿
 using TDD.And.The.Terminator.Interfaces;
+using TDD.And.The.Terminator.Models;
 
 namespace TDD.And.The.Terminator.Services
 {
@@ -12,9 +13,9 @@ namespace TDD.And.The.Terminator.Services
 
         }
 
-        public bool IfTargetHumanInvestigateFurther(string threat)
+        public bool IfTargetHumanInvestigateFurther(Threat threat)
         {
-            var result = _threatIdentificationService.IndentifyAsHuman(threat);
+            var result = _threatIdentificationService.InvestigateThreat(threat);
             return result;
         }
     }
